@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/maxogden/isomer-critter/issues"
   },
-  "homepage": "https://github.com/maxogden/isomer-critter"
+  "homepage": "https://github.com/maxogden/isomer-critter",
+  "dependencies": {
+    "isomer": "^0.2.4"
+  }
 }
