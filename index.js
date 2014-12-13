@@ -43,12 +43,12 @@ module.exports = function(src) {
     var delay = 0
     var interval = 10
     for (var i = s[0]; i > 0; i--) {
-      for (var j = s[1]; j > 0; j--) {
+      for (var j = 0; j < s[1]; j++) {
         for (var k = 0; k < s[2]; k++) {
           var val = interior.get(i,j,k)
           if (val) {
             var rgb = data.colors[val].map(function(v) { return scale(v, 0, 1, 0, 255) })
-            var shp = Shape.Prism(new Point(i * sc, j * sc, k * sc), sc, sc, sc)
+            var shp = Shape.Prism(new Point(i * sc, (s[2] - k) * sc, j * sc), sc, sc, sc)
             var cj = (function(sh, co) {
               return function() {
                 iso.add(sh, co)
