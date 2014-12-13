@@ -1,0 +1,22 @@
+{
+  "name": "isomer-critter",
+  "version": "1.0.0",
+  "description": "render voxel critters with isomer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/isomer-critter.git"
+  },
+  "keywords": [
+    "voxel"
+  ],
+  "author": "max ogden",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/maxogden/isomer-critter/issues"
+  },
+  "homepage": "https://github.com/maxogden/isomer-critter"
+}
