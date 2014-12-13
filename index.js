@@ -37,18 +37,18 @@ module.exports = function(src) {
     canvas.height = window.innerHeight
     document.body.appendChild(canvas)
     var iso = new Isomer(canvas)
-    var sc = 0.2
+    var sc = 0.6
     var shapes = []
     var s = interior.shape
     var delay = 0
-    var interval = 10
+    var interval = 2
     for (var i = s[0]; i > 0; i--) {
       for (var j = 0; j < s[1]; j++) {
         for (var k = 0; k < s[2]; k++) {
           var val = interior.get(i,j,k)
           if (val) {
             var rgb = data.colors[val].map(function(v) { return scale(v, 0, 1, 0, 255) })
-            var shp = Shape.Prism(new Point(i * sc, (s[2] - k) * sc, j * sc), sc, sc, sc)
+            var shp = Shape.Prism(new Point(i * sc, (s[2] - k) * sc, (j - 7) * sc), sc, sc, sc)
             var cj = (function(sh, co) {
               return function() {
                 iso.add(sh, co)
